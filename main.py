@@ -6,7 +6,7 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-public_tweets = api.home_timeline()
+trump_tweets = api.user_timeline("@realDonaldTrump")
 
-for tweet in public_tweets:
+for tweet in trump_tweets:
     print(tweet.text)
